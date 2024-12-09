@@ -1,8 +1,9 @@
 README.md
 
-#### AUTO GRUB CHANGER
+### AUTO GRUB CHANGER
 ## Script to Change your Grub Theme
 This is a simple script I created to change the grub theme and I attached a pacman hook to do it when I update my system.
+
 
 ## What it does
 I have this to change my grub theme automatically from the selection I have in the boot/grub/themes directory
