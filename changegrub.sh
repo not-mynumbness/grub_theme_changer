@@ -16,7 +16,7 @@ update_grub_config() {
         echo "GRUB_THEME=\"$THEME_DIR/$THEME_NAME/theme.txt\"" >> /etc/default/grub
         return 0
     else
-        echo "Error: Theme '$THEME_NAME' does not have a valid theme.txt file."
+        echo "\e[1m:: Error: Theme '$THEME_NAME' does not have a valid theme.txt file...\e[0m"
         return 1
     fi
 }
@@ -33,7 +33,7 @@ update_grub() {
     elif has_command grub-mkconfig; then
         grub-mkconfig -o /boot/grub/grub.cfg
     else
-        echo "Error: Neither updategrub nor grub-mkconfig is available."
+        echo "\e[1m:: Error: Neither updategrub nor grub-mkconfig is available. \e[0m"
         exit 1
     fi
 }
@@ -51,12 +51,12 @@ if [ "$UID" -eq 0 ]; then
         # Update grub
         echo -e "\t\e[1mUpdating grub...\e[0m"
         update_grub
-        echo -e "\e[1mINSTALLED \x1b[5m$THEME_NAME!\x1b[25m - Deffn Grub Changer \e[0m"
+        echo -e "\e[1m:: INSTALLED \x1b[5m$THEME_NAME!\x1b[25m - Deffn Grub Changer ...\e[0m"
     else
-        echo -e "\e[1mError: Failed to update grub config.\e[0m"
+        echo -e "\e[1m:: Error: Failed to update grub config...\e[0m"
         exit 1
     fi
 else
-    echo -e "\e[1mError: This script requires root access.\e[0m"
+    echo -e "\e[1m:: Error: This script requires root access...\e[0m"
     exit 1
 fi
