@@ -10,4 +10,4 @@ Target = *
 Description = Updates the grub Theme For Deffn...
 Depends = pacman
 When = PostTransaction
-Exec = /bin/bash $HOME/.config/scripts/changegrub.sh
+Exec = /bin/bash $HOME/.local/share/grub-theme-changer/change-theme
