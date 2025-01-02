@@ -1,10 +1,14 @@
 #/etc/pacman.conf.d/hooks/grub_theme_change.hooks
 [Trigger]
-Operation = Install
+##Operation = Install
 Operation = Upgrade
-Operation = Remove
+##Operation = Remove
 Type = Package
-Target = *
+Target = linux*
+Target = linuz*
+Target = kernel*
+Target = systemd*
+##Target = *
 
 [Action]
 Description = Updates the grub Theme For Deffn...
