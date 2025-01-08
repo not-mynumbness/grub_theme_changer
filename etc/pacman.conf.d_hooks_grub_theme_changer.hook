@@ -1,4 +1,4 @@
-#/etc/pacman.conf.d/hooks/grub_theme_change.hooks
+#/etc/pacman.d/hooks/grub_theme_change.hooks
 [Trigger]
 ##Operation = Install
 Operation = Upgrade
