@@ -1,9 +1,10 @@
-#/etc/pacman.d/hooks/grub_theme_change.hooks
+#/etc/pacman.d/hooks/grub-theme-change.hooks
 [Trigger]
 ##Operation = Install
 Operation = Upgrade
 ##Operation = Remove
 Type = Package
+Target = archlinux-keyring*
 Target = linux*
 Target = linuz*
 Target = kernel*

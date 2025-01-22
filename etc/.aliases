@@ -1,3 +1,3 @@
 ## Alias instead of hooks.
 
-alias grubchange='~/.local/share/grub_theme_changer/change-theme'
+alias changegrub='~/.local/share/grub-theme-changer/change-theme'
